@@ -3,12 +3,6 @@ package cn.jedm;
 
 import com.android.ddmlib.*;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.awt.image.RenderedImage;
-import java.io.File;
-import java.io.IOException;
-
 class FetchScreen {
 
 	private IDevice device;
