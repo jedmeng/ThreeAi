@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.LinkedList;
 
 class Ai {
-	static int searchLevel = 4;
+	static int searchLevel = 6;
 	private Grid grid;
 	Direction bestDirection = null;
 	public static Direction run(int[][] data) throws GameOverException {

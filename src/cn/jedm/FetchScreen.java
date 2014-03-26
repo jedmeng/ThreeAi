@@ -25,11 +25,11 @@ class FetchScreen {
 	}
 
 	public int[][] getBlocks() {
-		int[][] blocks = new int[5][4];
+		int[][] blocks = new int[Grid.height + 1][Grid.width];
 		RawImage rawImage = getScreenShot();
 		Recognise recognise = Recognise.getRecognise(rawImage);
-		for (int i=0; i<4; i++) {
-			for (int j=0; j<4; j++) {
+		for (int i=0; i<Grid.height; i++) {
+			for (int j=0; j<Grid.width; j++) {
 				try{
 					blocks[i][j] = recognise.location(i, j);
 				} catch(CannotRecogniseException e) {
@@ -40,7 +40,7 @@ class FetchScreen {
 			}
 
 		}
-		blocks[4][0] = recognise.next();
+		blocks[Grid.height][0] = recognise.next();
 		return blocks;
 	}
 

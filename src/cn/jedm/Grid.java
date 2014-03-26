@@ -56,7 +56,7 @@ class Grid {
 				}
 			}
 		}
-		int copyLevel = grid.copyLevel + 1;
+		int copyLevel = grid.getCopyLevel() + 1;
 		next = copyLevel == 1 ? grid.getNext() : 0;
 	}
 
@@ -127,6 +127,10 @@ class Grid {
 
 	public void clearNext() {
 		next = 0;
+	}
+
+	public int getCopyLevel() {
+		return copyLevel;
 	}
 
 	public HashMap<Location, Cell> getCells() {

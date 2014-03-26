@@ -2,9 +2,6 @@ package cn.jedm;
 
 import com.android.ddmlib.*;
 
-import java.io.IOException;
-import java.util.HashSet;
-
 public class Three {
 
 	private IDevice device;
